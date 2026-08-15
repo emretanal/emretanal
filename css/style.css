@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root { color-scheme: dark; --bg:#070b16; --card:rgba(17,24,39,.78); --text:#f8fafc; --muted:#94a3b8; --button:rgba(255,255,255,.055); --button-hover:rgba(255,255,255,.11); }
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body { min-height:100vh; margin:0; display:grid; place-items:center; padding:28px 18px; background:var(--bg); color:var(--text); font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.background { position:fixed; inset:0; z-index:-1; background:radial-gradient(circle at 18% 15%,rgba(37,99,235,.24),transparent 35%),radial-gradient(circle at 82% 85%,rgba(124,58,237,.18),transparent 36%),linear-gradient(145deg,#070b16 0%,#0c1425 100%); }
+.card { width:min(100%,480px); padding:40px 28px 26px; text-align:center; border:1px solid rgba(255,255,255,.1); border-radius:28px; background:var(--card); box-shadow:0 24px 80px rgba(0,0,0,.38); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+.profile-image { display:block; width:132px; height:132px; margin:0 auto 22px; border:3px solid rgba(96,165,250,.9); border-radius:50%; object-fit:cover; object-position:center 30%; box-shadow:0 0 0 7px rgba(96,165,250,.1),0 16px 38px rgba(0,0,0,.35); }
+h1 { margin:0 0 30px; font-size:clamp(1.75rem,6vw,2.15rem); line-height:1.15; letter-spacing:-.035em; }
+.links { display:grid; gap:12px; }
+.link-button { display:grid; grid-template-columns:24px 1fr 24px; align-items:center; min-height:58px; padding:0 18px; border:1px solid rgba(255,255,255,.08); border-radius:15px; background:var(--button); color:var(--text); text-decoration:none; font-size:.98rem; font-weight:600; transition:transform 180ms ease,background 180ms ease,border-color 180ms ease; }
+.link-button:hover { transform:translateY(-2px); border-color:rgba(96,165,250,.48); background:var(--button-hover); }
+.link-button:focus-visible { outline:3px solid rgba(96,165,250,.55); outline-offset:3px; }
+.link-button svg { width:22px; height:22px; fill:currentColor; }
+.arrow { color:var(--muted); }
+footer { margin-top:28px; color:#6f7d91; font-size:.78rem; }
+@media (max-width:420px) { .card { padding:32px 18px 22px; border-radius:22px; } .profile-image { width:116px; height:116px; } }
